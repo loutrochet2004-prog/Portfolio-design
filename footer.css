@@ -1,0 +1,55 @@
+/* Cette règle détache visuellement le pied de page du reste du site. */
+.site-footer {
+  border-top: 2px solid var(--text-primary);
+  margin-top: var(--spacing-xl);
+}
+
+/* Cette règle organise le contenu du footer sans multiplier les conteneurs. */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--spacing-lg);
+}
+
+/* Cette règle donne du poids au nom du site dans le footer. */
+.footer-brand {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+}
+
+/* Cette règle range les liens de footer sur une ligne souple. */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+/* Cette règle stylise les liens secondaires du footer. */
+.footer-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Cette règle garde la ligne de copyright bien lisible. */
+.footer-note {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Cette règle empile le footer sur mobile pour simplifier la lecture. */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-md);
+  }
+}

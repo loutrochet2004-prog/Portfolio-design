@@ -1,0 +1,136 @@
+/* Cette règle garde la navigation en haut de la page tout en restant dans le flux. */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, var(--bg-page), var(--bg-card));
+  border-bottom: 2px solid var(--text-primary);
+  box-shadow: 0 8px 0 var(--text-secondary);
+  transition: transform var(--transition-base);
+}
+
+/* Cette règle organise les liens autour du logo centré. */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Cette règle donne une apparence commune aux liens et boutons de navigation. */
+.nav-link,
+.nav-brand,
+.nav-button,
+.menu-link,
+.menu-close {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 1em;
+  font-weight: 700;
+  background-color: var(--bg-card);
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
+}
+
+/* Cette règle met en valeur les éléments interactifs au survol. */
+.nav-link:hover,
+.nav-brand:hover,
+.nav-button:hover,
+.menu-link:hover,
+.menu-close:hover {
+  background-color: var(--color-primary);
+  color: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+/* Cette règle souligne le nom du site au centre. */
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Cette règle garde le texte du logo bien visible même si la ligne revient à la ligne. */
+.nav-brand-text {
+  display: inline-block;
+}
+
+/* Cette règle masque le bouton burger sur grand écran. */
+.nav-button {
+  display: none;
+  cursor: pointer;
+}
+
+/* Cette règle transforme le menu mobile en panneau plein écran natif. */
+.menu-overlay {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 2px solid var(--text-primary);
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-page));
+}
+
+/* Cette règle colore le fond derrière la boîte de dialogue ouverte. */
+.menu-overlay::backdrop {
+  background-color: var(--bg-page);
+}
+
+/* Cette règle centre les liens du menu mobile avec beaucoup d'air. */
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-height: 100%;
+}
+
+/* Cette règle agrandit les liens du menu mobile pour une lecture facile. */
+.menu-link {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Cette règle garde le bouton de fermeture simple et lisible. */
+.menu-close {
+  cursor: pointer;
+}
+
+/* Cette règle adapte la navigation au petit écran avec un logo centré et un burger visible. */
+@media (max-width: 768px) {
+  .site-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: var(--spacing-md);
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-brand {
+    grid-column: 2;
+    justify-self: center;
+    font-size: 1em;
+  }
+
+  .nav-button {
+    display: flex;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+  }
+}

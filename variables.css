@@ -1,0 +1,24 @@
+:root {
+  /* Couleurs */
+  --color-primary: #E63B30;
+  --color-accent: #FF5E00;
+  --bg-page: #E67A30;
+  --bg-card: #E69A30;
+  --text-primary: #E63079;
+  --text-secondary: #B329E6;
+
+  /* Typographie */
+  --font-heading: 'Limelight', serif;
+  --font-body: 'open sans', sans-serif;
+  --font-size-base: 16px;
+
+  /* Espacements */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Divers */
+  --radius-card: 8px;
+  --transition-base: 0.2s ease;
+}

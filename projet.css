@@ -1,0 +1,56 @@
+/* Cette règle compacte légèrement l'introduction des pages projet. */
+.project-page .hero {
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Cette règle isole l'année du projet comme information secondaire. */
+.project-intro-meta {
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+/* Cette règle construit la galerie commune à toutes les pages projet. */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Cette règle donne une présence forte à chaque image de galerie. */
+.project-figure {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-page));
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+  box-shadow: 8px 8px 0 var(--text-secondary);
+  padding: var(--spacing-md);
+  margin: 0;
+}
+
+/* Cette règle garde les images lisibles et bien cadrées. */
+.project-figure-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+}
+
+/* Cette règle place la légende juste sous l'image avec un contraste secondaire. */
+.project-caption {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+}
+
+/* Cette règle empile la galerie projet en une seule colonne sur mobile. */
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}

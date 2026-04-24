@@ -1,0 +1,108 @@
+/* Cette règle transforme la section projets en grille de quatre colonnes. */
+.projects-section,
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Cette règle fait courir le titre de section sur toute la largeur de la grille. */
+.section-title {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+/* Cette règle donne une forme affirmée à chaque carte projet. */
+.project-card,
+.about-card {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-page));
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+  box-shadow: 8px 8px 0 var(--text-secondary);
+  padding: var(--spacing-md);
+}
+
+/* Cette règle fait de toute la carte projet une zone cliquable. */
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  height: 100%;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Cette règle garde les visuels de projet réguliers et faciles à comparer. */
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+}
+
+/* Cette règle sépare les informations techniques du reste du contenu. */
+.project-card-meta {
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Cette règle donne un espace clair au titre de chaque projet. */
+.project-card-title {
+  margin-bottom: 0;
+}
+
+/* Cette règle garde les descriptions à l'intérieur des cartes bien lisibles. */
+.project-card-text,
+.about-card-text,
+.intro-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Cette règle met en valeur les grands paragraphes de présentation. */
+.intro-section {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-page));
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-card);
+  box-shadow: 8px 8px 0 var(--text-secondary);
+  padding-top: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Cette règle donne le même rythme de grille aux repères de la page à propos. */
+.about-grid {
+  padding-top: 0;
+}
+
+/* Cette règle passe les cartes en accent au survol pour inviter à cliquer. */
+.project-card:hover,
+.about-card:hover {
+  background: linear-gradient(135deg, var(--color-accent), var(--bg-card));
+  transition: background-color var(--transition-base), transform var(--transition-base);
+  transform: translateY(-2px);
+}
+
+/* Cette règle empile les cartes en une seule colonne sur mobile. */
+@media (max-width: 768px) {
+  .projects-section,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .intro-section {
+    padding-top: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+}

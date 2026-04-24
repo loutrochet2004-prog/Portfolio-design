@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — PORTFOLIO DESIGN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="menu.js" defer></script>
+  </head>
+  <body class="site-body">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="galerie-projets.html">Galerie</a>
+        <a class="nav-brand" href="index.html"><span class="nav-brand-text">PORTFOLIO DESIGN</span></a>
+        <a class="nav-link" href="a-propos.html">À propos</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="nav-button" type="button" aria-label="Ouvrir le menu">☰</button>
+      </nav>
+    </header>
+
+    <dialog class="menu-overlay">
+      <section class="menu-panel">
+        <button class="menu-close" type="button" aria-label="Fermer le menu">Fermer</button>
+        <a class="menu-link" href="index.html">Accueil</a>
+        <a class="menu-link" href="galerie-projets.html">Galerie</a>
+        <a class="menu-link" href="a-propos.html">À propos</a>
+        <a class="menu-link" href="contact.html">Contact</a>
+      </section>
+    </dialog>
+
+    <main class="site-main">
+      <section class="hero">
+        <p class="hero-kicker">Échange</p>
+        <h1 class="hero-title">Contact</h1>
+        <p class="hero-text">Le contact propose un formulaire simple et des informations directes pour prolonger la visite, poser une question ou imaginer une future collaboration créative.</p>
+        <a class="hero-link" href="#contact">Aller au formulaire</a>
+      </section>
+
+      <section class="contact-section section-shell" id="contact">
+        <h2 class="section-title">Écrire un message</h2>
+
+        <article class="contact-card">
+          <h3>Formulaire</h3>
+          <form class="contact-form" action="#" method="post">
+            <label class="contact-label">
+              Nom
+              <input class="contact-input" type="text" name="nom" required>
+            </label>
+
+            <label class="contact-label">
+              Email
+              <input class="contact-input" type="email" name="email" required>
+            </label>
+
+            <label class="contact-label">
+              Message
+              <textarea class="contact-textarea" name="message" required></textarea>
+            </label>
+
+            <button class="contact-submit" type="submit">Envoyer</button>
+          </form>
+        </article>
+
+        <article class="contact-card">
+          <h3>Informations</h3>
+          <p class="contact-note">Je réponds sous quelques jours avec un retour clair sur le calendrier, les besoins et la forme du projet.</p>
+          <a class="contact-link" href="mailto:bonjour@portfolio-design.fr">bonjour@portfolio-design.fr</a>
+          <a class="contact-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="contact-link" href="https://www.behance.net/" target="_blank" rel="noreferrer">Behance</a>
+          <p class="contact-note">Base fictive: Paris, projets éditoriaux, expositions, identités culturelles et commandes pédagogiques.</p>
+        </article>
+      </section>
+
+      <section class="mentions-section section-shell" id="mentions">
+        <h2 class="section-title">Mentions légales</h2>
+        <article class="contact-card">
+          <h3>Cadre</h3>
+          <p class="contact-note">Ce site présente un portfolio fictif conçu pour un exercice de mise en page. Les commandes, les projets et les visuels servent uniquement à montrer une structure HTML et CSS claire, lisible et facilement modifiable par un débutant.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="footer-content">
+        <a class="footer-brand" href="index.html">PORTFOLIO DESIGN</a>
+        <section class="footer-links" aria-label="Réseaux sociaux et informations">
+          <a class="footer-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="footer-link" href="https://www.behance.net/" target="_blank" rel="noreferrer">Behance</a>
+          <a class="footer-link" href="contact.html#mentions">Mentions légales</a>
+        </section>
+        <p class="footer-note">Copyright 2026 PORTFOLIO DESIGN. Tous droits réservés.</p>
+      </section>
+    </footer>
+  </body>
+</html>
